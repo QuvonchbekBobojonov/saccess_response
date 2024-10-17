@@ -1,5 +1,5 @@
 from rest_framework.pagination import PageNumberPagination
-from src.saccess_response.response import SaccessResponse
+from .response import SaccessResponse
 
 
 class SaccessPageNumberPagination(PageNumberPagination):

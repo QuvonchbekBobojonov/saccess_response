@@ -1,6 +1,6 @@
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 
-from src.saccess_response.response import SaccessResponse
+from ..response import SaccessResponse
 
 
 class SaccessTokenObtainPairView(TokenObtainPairView):

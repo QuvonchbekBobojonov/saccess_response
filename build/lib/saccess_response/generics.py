@@ -1,5 +1,5 @@
 from rest_framework.generics import GenericAPIView
-from src.saccess_response.mixins import SaccessCreateModelMixin, SaccessListModelMixin, SaccessRetrieveModelMixin, \
+from .mixins import SaccessCreateModelMixin, SaccessListModelMixin, SaccessRetrieveModelMixin, \
     SaccessUpdateModelMixin, SaccessDestroyModelMixin
 
 

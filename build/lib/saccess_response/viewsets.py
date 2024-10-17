@@ -1,5 +1,5 @@
 from rest_framework.viewsets import ViewSetMixin
-from src.saccess_response.mixins import SaccessCreateModelMixin, SaccessListModelMixin, SaccessRetrieveModelMixin, \
+from .mixins import SaccessCreateModelMixin, SaccessListModelMixin, SaccessRetrieveModelMixin, \
     SaccessUpdateModelMixin, SaccessDestroyModelMixin
 
 

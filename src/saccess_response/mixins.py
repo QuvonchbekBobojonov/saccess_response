@@ -1,6 +1,6 @@
 from rest_framework.mixins import CreateModelMixin, ListModelMixin, RetrieveModelMixin, UpdateModelMixin, \
     DestroyModelMixin
-from src.saccess_response.response import SaccessResponse
+from .response import SaccessResponse
 
 
 class SaccessCreateModelMixin(CreateModelMixin):

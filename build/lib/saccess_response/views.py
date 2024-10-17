@@ -1,6 +1,6 @@
 from rest_framework.view import exception_handler
 from rest_framework.authtoken.views import ObtainAuthToken
-from src.saccess_response.response import SaccessResponse
+from .response import SaccessResponse
 
 
 def saccess_exception_handler(exc, context):
