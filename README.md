@@ -9,7 +9,7 @@ pip install django-saccess-response
 ## Usage
 
 ```python
-from django_saccess_response import SaccessResponse
+from saccess_response.response import SaccessResponse
 from rest_framework.views import APIView
 
 
@@ -33,7 +33,7 @@ result:
 ## Error Handling
 
 ```python
-from django_saccess_response import SaccessResponse
+from saccess_response.response import SaccessResponse
 from rest_framework.views import APIView
 
 class MyView(APIView):
