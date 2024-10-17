@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-saccess-response",
-    version="1.0.2",
+    version="1.0.3",
     description="Django app for customizing response",
     author="Quvonchbek Bobojonov",
     author_email="hi@moorfo.uz",
@@ -25,5 +25,6 @@ setup(
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
+        "Framework :: Django",
     ],
 )

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: django-saccess-response
-Version: 1.0.2
+Version: 1.0.3
 Summary: Django app for customizing response
 Home-page: https://github.com/QuvonchbekBobojonov/saccess_response
 Author: Quvonchbek Bobojonov
@@ -17,6 +17,7 @@ Classifier: Programming Language :: Python :: 3.10
 Classifier: Programming Language :: Python :: 3.11
 Classifier: Programming Language :: Python :: 3.12
 Classifier: Programming Language :: Python :: 3.13
+Classifier: Framework :: Django
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 
