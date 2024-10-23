@@ -18,7 +18,7 @@ class SaccessPageNumberPagination(PageNumberPagination):
             'previous': self.page.previous_page_number() if self.page.has_previous() else None,
             # Previous page number (if available).
             'previous_link': self.get_previous_link(),  # URL link to the previous page (if available).
-            'result': data  # The actual data of the current page.
+            'items': data  # The actual data of the current page.
         })
 
     # Override to provide a detailed schema for the paginated response, useful for documentation (e.g., OpenAPI/Swagger).
@@ -63,6 +63,6 @@ class SaccessPageNumberPagination(PageNumberPagination):
                     'nullable': True,  # Can be null if there's no previous page.
                     'format': 'uri'  # URL format for the previous page.
                 },
-                'result': schema  # The actual data schema.
+                'items': schema  # The actual data schema.
             }
         }

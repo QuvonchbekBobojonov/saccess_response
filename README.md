@@ -1,12 +1,20 @@
-# Django rest framework app for customizing response data
+# Django Saccess Response
+
+`django-saccess-response` is a Django REST Framework extension that provides a standardized success response format for API views. It simplifies handling both successful and error responses with customizable data structures.
 
 ## Installation
+
+Install the package via pip:
 
 ```bash
 pip install django-saccess-response
 ```
 
 ## Usage
+
+In your Django views, use `SaccessResponse` to wrap the response data.
+
+### Example: Standard Success Response
 
 ```python
 from saccess_response.response import SaccessResponse
@@ -19,7 +27,9 @@ class MyView(APIView):
         data = {'key': 'value'}
         return SaccessResponse(data)
 ```
-result:
+
+### Result:
+
 ```json
 {
     "saccess": true,
@@ -29,12 +39,14 @@ result:
 }
 ```
 
+### Example: Error Response
 
-## Error Handling
+To handle errors, pass `saccess=False`:
 
 ```python
 from saccess_response.response import SaccessResponse
 from rest_framework.views import APIView
+
 
 class MyView(APIView):
     @staticmethod
@@ -43,7 +55,8 @@ class MyView(APIView):
         return SaccessResponse(data, saccess=False)
 ```
 
-result:
+### Result:
+
 ```json
 {
     "saccess": false,
@@ -53,7 +66,9 @@ result:
 }
 ```
 
-## Custom Django Rest Framework error handling
+## Error Handling
+
+You can also customize Django REST Framework's error responses globally by modifying the `EXCEPTION_HANDLER` setting in your `settings.py`:
 
 ```python
 REST_FRAMEWORK = {
@@ -61,15 +76,27 @@ REST_FRAMEWORK = {
 }
 ```
 
-## Ganeric View and ViewSet class name
+This will format all exceptions using the `SaccessResponse` structure.
 
-- **CreateAPIView**: `SaccessCreateAPIView`
-- **RetrieveAPIView**: `SaccessRetrieveAPIView`
-- **UpdateAPIView**: `SaccessUpdateAPIView`
-- **DestroyAPIView**: `SaccessDestroyAPIView`
-- **ListAPIView**: `SaccessListAPIView`
-- **RetrieveUpdateAPIView**: `SaccessRetrieveUpdateAPIView`
-- **RetrieveDestroyAPIView**: `SaccessRetrieveDestroyAPIView`
-- **RetrieveUpdateDestroyAPIView**: `SaccessRetrieveUpdateDestroyAPIView`
-- **ModelViewSet**: `SaccessModelViewSet`
-- **ReadOnlyModelViewSet**: `SaccessReadOnlyModelViewSet`
+## Generic Views and ViewSets
+
+This package also provides customized DRF generic views and viewsets for standardized response handling.
+
+| Standard View                  | Saccess Equivalent                    |
+|--------------------------------|---------------------------------------|
+| `CreateAPIView`                | `SaccessCreateAPIView`                |
+| `RetrieveAPIView`              | `SaccessRetrieveAPIView`              |
+| `UpdateAPIView`                | `SaccessUpdateAPIView`                |
+| `DestroyAPIView`               | `SaccessDestroyAPIView`               |
+| `ListAPIView`                  | `SaccessListAPIView`                  |
+| `RetrieveUpdateAPIView`        | `SaccessRetrieveUpdateAPIView`        |
+| `RetrieveDestroyAPIView`       | `SaccessRetrieveDestroyAPIView`       |
+| `RetrieveUpdateDestroyAPIView` | `SaccessRetrieveUpdateDestroyAPIView` |
+| `ModelViewSet`                 | `SaccessModelViewSet`                 |
+| `ReadOnlyModelViewSet`         | `SaccessReadOnlyModelViewSet`         |
+
+These classes behave like their DRF counterparts but automatically format responses using `SaccessResponse`.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
