@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: django-saccess-response
-Version: 1.0.4.1
+Version: 1.0.5
 Summary: Django app for customizing response
 Home-page: https://github.com/QuvonchbekBobojonov/saccess_response
 Author: Quvonchbek Bobojonov
@@ -55,7 +55,7 @@ class MyView(APIView):
 
 ```json
 {
-    "saccess": true,
+    "success": true,
     "result": {
         "key": "value"
     }
@@ -82,7 +82,7 @@ class MyView(APIView):
 
 ```json
 {
-    "saccess": false,
+    "success": false,
     "result": {
         "detail": "error"
     }
@@ -105,18 +105,18 @@ This will format all exceptions using the `SaccessResponse` structure.
 
 This package also provides customized DRF generic views and viewsets for standardized response handling.
 
-| Standard View                  | Saccess Equivalent              |
-| ------------------------------ | ------------------------------- |
-| `CreateAPIView`                | `SaccessCreateAPIView`           |
-| `RetrieveAPIView`              | `SaccessRetrieveAPIView`         |
-| `UpdateAPIView`                | `SaccessUpdateAPIView`           |
-| `DestroyAPIView`               | `SaccessDestroyAPIView`          |
-| `ListAPIView`                  | `SaccessListAPIView`             |
-| `RetrieveUpdateAPIView`        | `SaccessRetrieveUpdateAPIView`   |
-| `RetrieveDestroyAPIView`       | `SaccessRetrieveDestroyAPIView`  |
+| Standard View                  | Saccess Equivalent                    |
+|--------------------------------|---------------------------------------|
+| `CreateAPIView`                | `SaccessCreateAPIView`                |
+| `RetrieveAPIView`              | `SaccessRetrieveAPIView`              |
+| `UpdateAPIView`                | `SaccessUpdateAPIView`                |
+| `DestroyAPIView`               | `SaccessDestroyAPIView`               |
+| `ListAPIView`                  | `SaccessListAPIView`                  |
+| `RetrieveUpdateAPIView`        | `SaccessRetrieveUpdateAPIView`        |
+| `RetrieveDestroyAPIView`       | `SaccessRetrieveDestroyAPIView`       |
 | `RetrieveUpdateDestroyAPIView` | `SaccessRetrieveUpdateDestroyAPIView` |
-| `ModelViewSet`                 | `SaccessModelViewSet`            |
-| `ReadOnlyModelViewSet`         | `SaccessReadOnlyModelViewSet`    |
+| `ModelViewSet`                 | `SaccessModelViewSet`                 |
+| `ReadOnlyModelViewSet`         | `SaccessReadOnlyModelViewSet`         |
 
 These classes behave like their DRF counterparts but automatically format responses using `SaccessResponse`.
 

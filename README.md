@@ -32,7 +32,7 @@ class MyView(APIView):
 
 ```json
 {
-    "saccess": true,
+    "success": true,
     "result": {
         "key": "value"
     }
@@ -59,7 +59,7 @@ class MyView(APIView):
 
 ```json
 {
-    "saccess": false,
+    "success": false,
     "result": {
         "detail": "error"
     }
